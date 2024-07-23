@@ -1,0 +1,19 @@
+services:
+  osm-download-worker:
+    container_name: osm-download-worker
+    env_file:
+      - path: .env.development.local
+        required: true
+    environment:
+      TEMPORAL_URL: host.docker.internal:7233
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    image: osm-download:local
+    build:
+      context: .
+    labels:
+      - 'app=osm-download-worker'
+    volumes:
+      - ./volumes/input:/mnt/input 
+      - ./volumes/output:/mnt/output
+    command: ['/app/osm-download-workflow', 'worker']
