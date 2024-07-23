@@ -3,15 +3,16 @@ module github.com/bikehopper/osm-download-workflow
 go 1.22.0
 
 require (
+	github.com/aws/aws-sdk-go-v2 v1.30.0
+	github.com/aws/aws-sdk-go-v2/config v1.27.21
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.56.1
 	github.com/google/uuid v1.6.0
 	go.temporal.io/api v1.34.0
 	go.temporal.io/sdk v1.27.0
 )
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.30.0 // indirect
 	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.2 // indirect
-	github.com/aws/aws-sdk-go-v2/config v1.27.21 // indirect
 	github.com/aws/aws-sdk-go-v2/credentials v1.17.21 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.8 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.12 // indirect
@@ -22,7 +23,6 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.3.14 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.11.14 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.17.12 // indirect
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.56.1 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sso v1.21.1 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.25.1 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.29.1 // indirect
